@@ -1,96 +1,236 @@
-<?xml version="1.0" encoding="utf-8"?>
-<rdf:RDF
-   xmlns:ifi="http://attempto.ifi.uzh.ch/ace_lexicon#"
-   xmlns:owl="http://www.w3.org/2002/07/owl#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-   xmlns:vann="http://purl.org/vocab/vann/"
-   xmlns:xml="http://www.w3.org/XML/1998/namespace"
-   xmlns:xsd="http://www.w3.org/2001/XMLSchema#"  
-   xmlns:loc="http://id.loc.gov/vocabulary/relators/" 
-   xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:foaf="http://xmlns.com/foaf/0.1/"
-   xmlns:dbpedia="http://dbpedia.org/resource/"
-   xmlns:cc = "http://creativecommons.org/ns#"
-   xmlns:prov = "http://www.w3.org/ns/prov#"
-   xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-   xmlns:void="http://rdfs.org/ns/void#"
-   xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#" 
-   xmlns="http://www.cwrc.ca/ontologies/OrlandoOntology#" 
-   xml:base="http://www.cwrc.ca/ontologies/OrlandoOntology#"
-   xmlns:cwrc="http://www.cwrc.ca/ontologies/OrlandoOntology#">
-   <owl:Ontology rdf:about="">
-    <dc:title xml:lang="en">The Orlando Ontology</dc:title>
-    <rdfs:label xml:lang="en">The Orlando Ontology</rdfs:label>
-    <foaf:name xml:lang="en">The Orlando Ontology</foaf:name>
-    <dc:title xml:lang="fr">L'Ontologie Orlando</dc:title>
-    <rdfs:label xml:lang="fr">L'Ontologie Orlando</rdfs:label>
-    <foaf:name xml:lang="fr">L'Ontologie Orlando</foaf:name>
-    <dc:description xml:lang="en">The Orlando Ontology is the overall ontology that represents all elements of structure within the Canadian Writing Research Collaboratory.</dc:description>
-    <skos:definition xml:lang="en">The Orlando Ontology is the overall ontology that represents all elements of structure within the Canadian Writing Research Collaboratory.</skos:definition>
-    <rdfs:comment xml:lang="en">The Orlando Ontology is the overall ontology that represents all elements of structure within the Canadian Writing Research Collaboratory.</rdfs:comment>
-    <dc:description xml:lang="fr">L'Ontologie Orlando est l'ontologie maîtresse qui représente tous les éléments de la structure du Collaboratoire scientifique des écrits du Canada.</dc:description>
-    <skos:definition xml:lang="fr">L'Ontologie Orlando est l'ontologie maîtresse qui représente tous les éléments de la structure du Collaboratoire scientifique des écrits du Canada.</skos:definition>
-    <rdfs:comment xml:lang="fr">L'Ontologie Orlando est l'ontologie maîtresse qui représente tous les éléments de la structure du Collaboratoire scientifique des écrits du Canada.</rdfs:comment>  
-    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.3</owl:versionInfo>
-    <owl:priorVersion rdf:resource=""/>
-    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">20160501</dc:date>
-    <dc:rights rdf:resource="http://creativecommons.org/licenses/by/3.0/"/> 
-    <vs:term_status xml:lang="en">Testing</vs:term_status>
-    <dc:creator>
-     <foaf:Person rdf:about="#JohnSimpson">
-      <foaf:name>John Simpson</foaf:name>
-     </foaf:Person>
-    </dc:creator>
-    <dc:creator rdf:resource="http://rdf.muninn-project.org/ww1/2011/11/11/Person/Warren"/>
-    <dc:publisher>
-     <foaf:Organization rdf:about="#cwrc">
-      <foaf:name xml:lang="fr">Le Collaboratoire scientifique des écrits du Canada</foaf:name>
-      <foaf:name xml:lang="en">The Canadian Writing Research Collaboratory</foaf:name>
-     </foaf:Organization>
-    </dc:publisher>
-    <loc:pdr>  
-   <foaf:Person rdf:about="#SusanBrown"> 
-      <foaf:name>Susan Brown</foaf:name>
-     </foaf:Person>
-    </loc:pdr>
-    <loc:fnd>
-     <foaf:Organization rdf:about="#sshrc">
-      <foaf:name xml:lang="en">Social Sciences and Humanities Research Council</foaf:name>
-      <foaf:name xml:lang="fr">Conseil de recherches en sciences humaines</foaf:name>
-      <foaf:nick>SSHRC</foaf:nick>
-     </foaf:Organization>
-    </loc:fnd>
-    <vann:preferredNamespacePrefix>cwrc</vann:preferredNamespacePrefix>
-    <void:inDataset rdf:resource="#datasetdefinition"/>
-   </owl:Ontology>
- 
-<!-- http://id.loc.gov/vocabulary/relators/ctb -->
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.cwrc.ca/ontologies/OrlandoOntology#"
+     xml:base="http://www.cwrc.ca/ontologies/OrlandoOntology"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:loc="http://id.loc.gov/vocabulary/relators/"
+     xmlns:void="http://rdfs.org/ns/void#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:skosxl="http://www.w3.org/2008/05/skos-xl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:dbpedia="http://dbpedia.org/resource/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:cwrc="http://www.cwrc.ca/ontologies/OrlandoOntology#"
+     xmlns:ifi="http://attempto.ifi.uzh.ch/ace_lexicon#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:wot="http://xmlns.com/wot/0.1/"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <owl:Ontology rdf:about="http://www.cwrc.ca/ontologies/OrlandoOntology">
+        <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
+        <dc:description xml:lang="fr">L&apos;Ontologie Orlando est l&apos;ontologie maîtresse qui représente tous les éléments de la structure du Collaboratoire scientifique des écrits du Canada.</dc:description>
+        <rdfs:label xml:lang="fr">L&apos;Ontologie Orlando</rdfs:label>
+        <vs:term_status xml:lang="en">Testing</vs:term_status>
+        <rdfs:comment xml:lang="fr">L&apos;Ontologie Orlando est l&apos;ontologie maîtresse qui représente tous les éléments de la structure du Collaboratoire scientifique des écrits du Canada.</rdfs:comment>
+        <loc:fnd rdf:resource="http://www.cwrc.ca/ontologies/OrlandoOntology#sshrc"/>
+        <dc:publisher rdf:resource="http://www.cwrc.ca/ontologies/OrlandoOntology#cwrc"/>
+        <dc:creator rdf:resource="http://www.cwrc.ca/ontologies/OrlandoOntology#AbiLemak"/>
+        <dc:title xml:lang="fr">L&apos;Ontologie Orlando</dc:title>
+        <skos:definition xml:lang="fr">L&apos;Ontologie Orlando est l&apos;ontologie maîtresse qui représente tous les éléments de la structure du Collaboratoire scientifique des écrits du Canada.</skos:definition>
+        <dc:creator rdf:resource="http://www.cwrc.ca/ontologies/OrlandoOntology#JohnSimpson"/>
+        <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">20160501</dc:date>
+        <dc:title xml:lang="en">The Orlando Ontology</dc:title>
+        <dc:rights rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+        <owl:priorVersion rdf:resource="http://www.cwrc.ca/ontologies/OrlandoOntology"/>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.3</owl:versionInfo>
+        <loc:pdr rdf:resource="http://www.cwrc.ca/ontologies/OrlandoOntology#SusanBrown"/>
+        <vann:preferredNamespacePrefix>cwrc</vann:preferredNamespacePrefix>
+        <void:inDataset rdf:resource="http://www.cwrc.ca/ontologies/OrlandoOntology#datasetdefinition"/>
+        <rdfs:label xml:lang="en">The Orlando Ontology</rdfs:label>
+        <foaf:name xml:lang="en">The Orlando Ontology</foaf:name>
+        <dc:description xml:lang="en">The Orlando Ontology is the overall ontology that represents all elements of structure within the Canadian Writing Research Collaboratory.</dc:description>
+        <rdfs:comment xml:lang="en">The Orlando Ontology is the overall ontology that represents all elements of structure within the Canadian Writing Research Collaboratory.</rdfs:comment>
+        <dc:creator rdf:resource="http://rdf.muninn-project.org/ww1/2011/11/11/Person/Warren"/>
+        <foaf:name xml:lang="fr">L&apos;Ontologie Orlando</foaf:name>
+        <skos:definition xml:lang="en">The Orlando Ontology is the overall ontology that represents all elements of structure within the Canadian Writing Research Collaboratory.</skos:definition>
+    </owl:Ontology>
+    
 
-   <void:Dataset rdf:about="#datasetdefinition">
-    <dc:title xml:lang="en">The Orlando Ontology</dc:title>
-    <rdfs:label xml:lang="en">The Orlando Ontology</rdfs:label>
-    <foaf:name xml:lang="en">The Orlando Ontology</foaf:name>
-    <dc:title xml:lang="fr">L'Ontologie Orlando</dc:title>
-    <rdfs:label xml:lang="fr">L'Ontologie Orlando</rdfs:label>
-    <foaf:name xml:lang="fr">L'Ontologie Orlando</foaf:name>
-    <dc:description xml:lang="en">The Orlando Ontology is the overall ontology that represents all elements of structure within the Canadian Writing Research Collaboratory.</dc:description>
-    <skos:definition xml:lang="en">The Orlando Ontology is the overall ontology that represents all elements of structure within the Canadian Writing Research Collaboratory.</skos:definition>
-    <rdfs:comment xml:lang="en">The Orlando Ontology is the overall ontology that represents all elements of structure within the Canadian Writing Research Collaboratory.</rdfs:comment>
-    <dc:description xml:lang="en">L'Ontologie Orlando est l'ontologie maîtresse qui représente tous les éléments de la structure du Collaboratoire scientifique des écrits du Canada.</dc:description>
-    <skos:definition xml:lang="en">L'Ontologie Orlando est l'ontologie maîtresse qui représente tous les éléments de la structure du Collaboratoire scientifique des écrits du Canada.</skos:definition>
-    <rdfs:comment xml:lang="en">L'Ontologie Orlando est l'ontologie maîtresse qui représente tous les éléments de la structure du Collaboratoire scientifique des écrits du Canada.</rdfs:comment>
-    <!-- -->
-    <cc:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/> 
-    <cc:Jurisdiction rdf:resource="http://dbpedia.org/resource/Canada"/>
-    <cc:attributionURL rdf:resource="http://www.cwrc.ca/"/>
-    <dc:creator rdf:resource="#JohnSimpson"/>
-    <dc:creator rdf:resource="http://rdf.muninn-project.org/ww1/2011/11/11/Person/Warren"/>
-    <dc:publisher rdf:resource="#cwrc"/>
-    <loc:pdr rdf:resource="#SusanBrown"/> 
-    <loc:fnd rdf:resource="#sshrc"/>
-    <rdfs:isDefinedBy rdf:resource=""/>
-    <foaf:logo rdf:resource="http://www.cwrc.ca/wp-content/uploads/2010/11/CWRC_logo_v074.gif"/>
-   </void:Dataset>
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://creativecommons.org/ns#Jurisdiction -->
+
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#Jurisdiction"/>
+    
+
+
+    <!-- http://creativecommons.org/ns#attributionURL -->
+
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#attributionURL"/>
+    
+
+
+    <!-- http://creativecommons.org/ns#license -->
+
+    <owl:AnnotationProperty rdf:about="http://creativecommons.org/ns#license"/>
+    
+
+
+    <!-- http://id.loc.gov/vocabulary/relators/fnd -->
+
+    <owl:AnnotationProperty rdf:about="http://id.loc.gov/vocabulary/relators/fnd"/>
+    
+
+
+    <!-- http://id.loc.gov/vocabulary/relators/pdr -->
+
+    <owl:AnnotationProperty rdf:about="http://id.loc.gov/vocabulary/relators/pdr"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/publisher -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/publisher"/>
+    
+
+
+    <!-- http://www.w3.org/2004/02/skos/core#definition -->
+
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/logo -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/logo"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/nick -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/nick"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://rdfs.org/ns/void#Dataset -->
+
+    <owl:Class rdf:about="http://rdfs.org/ns/void#Dataset"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.cwrc.ca/ontologies/OrlandoOntology#AbiLemak -->
+
+    <owl:NamedIndividual rdf:about="http://www.cwrc.ca/ontologies/OrlandoOntology#AbiLemak">
+        <rdf:type rdf:resource="http://www.w3.org/2000/10/swap/pim/contact#Person"/>
+        <foaf:firstName>Abigel</foaf:firstName>
+        <foaf:lastName>Lemak</foaf:lastName>
+        <foaf:name>AbiLemak</foaf:name>
+        <foaf:title xml:lang="en">Miss</foaf:title>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cwrc.ca/ontologies/OrlandoOntology#JohnSimpson -->
+
+    <owl:NamedIndividual rdf:about="http://www.cwrc.ca/ontologies/OrlandoOntology#JohnSimpson">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:name>John Simpson</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cwrc.ca/ontologies/OrlandoOntology#SusanBrown -->
+
+    <owl:NamedIndividual rdf:about="http://www.cwrc.ca/ontologies/OrlandoOntology#SusanBrown">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <foaf:name>Susan Brown</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cwrc.ca/ontologies/OrlandoOntology#cwrc -->
+
+    <owl:NamedIndividual rdf:about="http://www.cwrc.ca/ontologies/OrlandoOntology#cwrc">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <foaf:name xml:lang="fr">Le Collaboratoire scientifique des écrits du Canada</foaf:name>
+        <foaf:name xml:lang="en">The Canadian Writing Research Collaboratory</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cwrc.ca/ontologies/OrlandoOntology#datasetdefinition -->
+
+    <owl:NamedIndividual rdf:about="http://www.cwrc.ca/ontologies/OrlandoOntology#datasetdefinition">
+        <rdf:type rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+        <cc:Jurisdiction rdf:resource="http://dbpedia.org/resource/Canada"/>
+        <cc:attributionURL rdf:resource="http://www.cwrc.ca/"/>
+        <cc:license rdf:resource="http://creativecommons.org/licenses/by/3.0/"/>
+        <loc:fnd rdf:resource="http://www.cwrc.ca/ontologies/OrlandoOntology#sshrc"/>
+        <loc:pdr rdf:resource="http://www.cwrc.ca/ontologies/OrlandoOntology#SusanBrown"/>
+        <dc:creator rdf:resource="http://rdf.muninn-project.org/ww1/2011/11/11/Person/Warren"/>
+        <dc:creator rdf:resource="http://www.cwrc.ca/ontologies/OrlandoOntology#JohnSimpson"/>
+        <dc:description xml:lang="en">L&apos;Ontologie Orlando est l&apos;ontologie maîtresse qui représente tous les éléments de la structure du Collaboratoire scientifique des écrits du Canada.</dc:description>
+        <dc:description xml:lang="en">The Orlando Ontology is the overall ontology that represents all elements of structure within the Canadian Writing Research Collaboratory.</dc:description>
+        <dc:publisher rdf:resource="http://www.cwrc.ca/ontologies/OrlandoOntology#cwrc"/>
+        <dc:title xml:lang="fr">L&apos;Ontologie Orlando</dc:title>
+        <dc:title xml:lang="en">The Orlando Ontology</dc:title>
+        <rdfs:comment xml:lang="en">L&apos;Ontologie Orlando est l&apos;ontologie maîtresse qui représente tous les éléments de la structure du Collaboratoire scientifique des écrits du Canada.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The Orlando Ontology is the overall ontology that represents all elements of structure within the Canadian Writing Research Collaboratory.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.cwrc.ca/ontologies/OrlandoOntology"/>
+        <rdfs:label xml:lang="fr">L&apos;Ontologie Orlando</rdfs:label>
+        <rdfs:label xml:lang="en">The Orlando Ontology</rdfs:label>
+        <skos:definition xml:lang="en">L&apos;Ontologie Orlando est l&apos;ontologie maîtresse qui représente tous les éléments de la structure du Collaboratoire scientifique des écrits du Canada.</skos:definition>
+        <skos:definition xml:lang="en">The Orlando Ontology is the overall ontology that represents all elements of structure within the Canadian Writing Research Collaboratory.</skos:definition>
+        <foaf:logo rdf:resource="http://www.cwrc.ca/wp-content/uploads/2010/11/CWRC_logo_v074.gif"/>
+        <foaf:name xml:lang="fr">L&apos;Ontologie Orlando</foaf:name>
+        <foaf:name xml:lang="en">The Orlando Ontology</foaf:name>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.cwrc.ca/ontologies/OrlandoOntology#sshrc -->
+
+    <owl:NamedIndividual rdf:about="http://www.cwrc.ca/ontologies/OrlandoOntology#sshrc">
+        <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+        <foaf:name xml:lang="fr">Conseil de recherches en sciences humaines</foaf:name>
+        <foaf:name xml:lang="en">Social Sciences and Humanities Research Council</foaf:name>
+        <foaf:nick>SSHRC</foaf:nick>
+    </owl:NamedIndividual>
 </rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.5.20160517-0735) https://github.com/owlcs/owlapi -->
+
