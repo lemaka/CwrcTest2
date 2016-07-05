@@ -3,6 +3,6 @@
     <uri id="Imports Wizard Entry" name="http://xmlns.com/foaf/0.1/" uri="http://xmlns.com/foaf/spec/"/>
     <uri id="Imports Wizard Entry" name="http://xmlns.com/foaf/0.1/" uri="http://xmlns.com/foaf/0.1"/>
     <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
-        <uri id="Automatically generated entry, Timestamp=1467690266085" name="http://www.cwrc.ca/ontologies/OrlandoOntology" uri="ontology.owl"/>
+        <uri id="Automatically generated entry, Timestamp=1467690485594" name="http://www.cwrc.ca/ontologies/OrlandoOntology" uri="ontology.owl"/>
     </group>
 </catalog>
