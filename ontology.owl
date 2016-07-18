@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.cwrc.ca/ontologies/OrlandoOntology#"
-     xml:base="http://www.cwrc.ca/ontologies/OrlandoOntology"
+<rdf:RDF xmlns="http://xmlns.com/foaf/0.1/"
+     xml:base="http://xmlns.com/foaf/0.1/"
      xmlns:cc="http://creativecommons.org/ns#"
      xmlns:loc="http://id.loc.gov/vocabulary/relators/"
      xmlns:void="http://rdfs.org/ns/void#"
@@ -15,6 +15,7 @@
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:terms="http://purl.org/dc/terms/"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:relationship="http://purl.org/vocab/relationship/"
      xmlns:terms1="http://open.vocab.org/terms/"
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#"
@@ -22,7 +23,8 @@
      xmlns:wot="http://xmlns.com/wot/0.1/"
      xmlns:foaf="http://xmlns.com/foaf/0.1/"
      xmlns:dc="http://purl.org/dc/elements/1.1/">
-    <owl:Ontology rdf:about="http://www.cwrc.ca/ontologies/OrlandoOntology">
+    <owl:Ontology rdf:about="http://xmlns.com/foaf/0.1/">
+        <owl:imports rdf:resource="http://purl.org/vocab/relationship/"/>
         <owl:imports rdf:resource="http://xmlns.com/foaf/0.1/"/>
         <dc:description xml:lang="fr">L&apos;Ontologie Orlando est l&apos;ontologie maîtresse qui représente tous les éléments de la structure du Collaboratoire scientifique des écrits du Canada.</dc:description>
         <rdfs:label xml:lang="fr">L&apos;Ontologie Orlando</rdfs:label>
@@ -43,11 +45,11 @@
         <vann:preferredNamespacePrefix>cwrc</vann:preferredNamespacePrefix>
         <void:inDataset rdf:resource="http://www.cwrc.ca/ontologies/OrlandoOntology#datasetdefinition"/>
         <rdfs:label xml:lang="en">The Orlando Ontology</rdfs:label>
-        <foaf:name xml:lang="en">The Orlando Ontology</foaf:name>
+        <name xml:lang="en">The Orlando Ontology</name>
         <dc:description xml:lang="en">The Orlando Ontology is the overall ontology that represents all elements of structure within the Canadian Writing Research Collaboratory.</dc:description>
         <rdfs:comment xml:lang="en">The Orlando Ontology is the overall ontology that represents all elements of structure within the Canadian Writing Research Collaboratory.</rdfs:comment>
         <dc:creator rdf:resource="http://rdf.muninn-project.org/ww1/2011/11/11/Person/Warren"/>
-        <foaf:name xml:lang="fr">L&apos;Ontologie Orlando</foaf:name>
+        <name xml:lang="fr">L&apos;Ontologie Orlando</name>
         <skos:definition xml:lang="en">The Orlando Ontology is the overall ontology that represents all elements of structure within the Canadian Writing Research Collaboratory.</skos:definition>
     </owl:Ontology>
     
@@ -100,9 +102,21 @@
     
 
 
+    <!-- http://purl.org/dc/elements/1.1/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/description"/>
+    
+
+
     <!-- http://purl.org/dc/elements/1.1/publisher -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/publisher"/>
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/elements/1.1/title"/>
     
 
 
@@ -112,15 +126,62 @@
     
 
 
+    <!-- http://xmlns.com/foaf/0.1/firstName -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/firstName"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/lastName -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/lastName"/>
+    
+
+
     <!-- http://xmlns.com/foaf/0.1/logo -->
 
     <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/logo"/>
     
 
 
+    <!-- http://xmlns.com/foaf/0.1/name -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/name"/>
+    
+
+
     <!-- http://xmlns.com/foaf/0.1/nick -->
 
     <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/nick"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/title -->
+
+    <owl:AnnotationProperty rdf:about="http://xmlns.com/foaf/0.1/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/vocab/relationship/employedBy -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/vocab/relationship/employedBy"/>
+    
+
+
+    <!-- http://purl.org/vocab/relationship/employerOf -->
+
+    <owl:ObjectProperty rdf:about="http://purl.org/vocab/relationship/employerOf"/>
     
 
 
@@ -141,6 +202,18 @@
     
 
 
+    <!-- http://xmlns.com/foaf/0.1/Organization -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Organization"/>
+    
+
+
+    <!-- http://xmlns.com/foaf/0.1/Person -->
+
+    <owl:Class rdf:about="http://xmlns.com/foaf/0.1/Person"/>
+    
+
+
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
@@ -156,9 +229,10 @@
 
     <owl:NamedIndividual rdf:about="http://www.cwrc.ca/ontologies/OrlandoOntology#AbiLemak">
         <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-        <foaf:firstName>Abi</foaf:firstName>
-        <foaf:lastName>Lemak</foaf:lastName>
-        <foaf:title xml:lang="en">Ms</foaf:title>
+        <relationship:employedBy rdf:resource="http://www.cwrc.ca/ontologies/OrlandoOntology#SusanBrown"/>
+        <firstName>Abi</firstName>
+        <lastName>Lemak</lastName>
+        <title xml:lang="en">Ms</title>
     </owl:NamedIndividual>
     
 
@@ -167,7 +241,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.cwrc.ca/ontologies/OrlandoOntology#JohnSimpson">
         <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-        <foaf:name>John Simpson</foaf:name>
+        <name>John Simpson</name>
     </owl:NamedIndividual>
     
 
@@ -176,7 +250,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.cwrc.ca/ontologies/OrlandoOntology#SusanBrown">
         <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-        <foaf:name>Susan Brown</foaf:name>
+        <relationship:employerOf rdf:resource="http://www.cwrc.ca/ontologies/OrlandoOntology#AbiLemak"/>
+        <name>Susan Brown</name>
     </owl:NamedIndividual>
     
 
@@ -185,8 +260,8 @@
 
     <owl:NamedIndividual rdf:about="http://www.cwrc.ca/ontologies/OrlandoOntology#cwrc">
         <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
-        <foaf:name xml:lang="fr">Le Collaboratoire scientifique des écrits du Canada</foaf:name>
-        <foaf:name xml:lang="en">The Canadian Writing Research Collaboratory</foaf:name>
+        <name xml:lang="fr">Le Collaboratoire scientifique des écrits du Canada</name>
+        <name xml:lang="en">The Canadian Writing Research Collaboratory</name>
     </owl:NamedIndividual>
     
 
@@ -214,9 +289,9 @@
         <rdfs:label xml:lang="en">The Orlando Ontology</rdfs:label>
         <skos:definition xml:lang="en">L&apos;Ontologie Orlando est l&apos;ontologie maîtresse qui représente tous les éléments de la structure du Collaboratoire scientifique des écrits du Canada.</skos:definition>
         <skos:definition xml:lang="en">The Orlando Ontology is the overall ontology that represents all elements of structure within the Canadian Writing Research Collaboratory.</skos:definition>
-        <foaf:logo rdf:resource="http://www.cwrc.ca/wp-content/uploads/2010/11/CWRC_logo_v074.gif"/>
-        <foaf:name xml:lang="fr">L&apos;Ontologie Orlando</foaf:name>
-        <foaf:name xml:lang="en">The Orlando Ontology</foaf:name>
+        <logo rdf:resource="http://www.cwrc.ca/wp-content/uploads/2010/11/CWRC_logo_v074.gif"/>
+        <name xml:lang="fr">L&apos;Ontologie Orlando</name>
+        <name xml:lang="en">The Orlando Ontology</name>
     </owl:NamedIndividual>
     
 
@@ -225,9 +300,9 @@
 
     <owl:NamedIndividual rdf:about="http://www.cwrc.ca/ontologies/OrlandoOntology#sshrc">
         <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
-        <foaf:name xml:lang="fr">Conseil de recherches en sciences humaines</foaf:name>
-        <foaf:name xml:lang="en">Social Sciences and Humanities Research Council</foaf:name>
-        <foaf:nick>SSHRC</foaf:nick>
+        <name xml:lang="fr">Conseil de recherches en sciences humaines</name>
+        <name xml:lang="en">Social Sciences and Humanities Research Council</name>
+        <nick>SSHRC</nick>
     </owl:NamedIndividual>
 </rdf:RDF>
 
